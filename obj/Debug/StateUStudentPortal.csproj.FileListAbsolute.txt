@@ -101,7 +101,6 @@ C:\Users\johne\Documents\GitHub\StateUStudentPortal\bin\Microsoft.Owin.Security.
 C:\Users\johne\Documents\GitHub\StateUStudentPortal\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\johne\Documents\GitHub\StateUStudentPortal\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\johne\Documents\GitHub\StateUStudentPortal\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\johne\Documents\GitHub\StateUStudentPortal\obj\Debug\StateUStudentPortal.csprojAssemblyReference.cache
 C:\Users\johne\Documents\GitHub\StateUStudentPortal\obj\Debug\StateUStudentPortal.csproj.CoreCompileInputs.cache
 C:\Users\johne\Documents\GitHub\StateUStudentPortal\obj\Debug\StateUStudentPortal.csproj.CopyComplete
 C:\Users\johne\Documents\GitHub\StateUStudentPortal\obj\Debug\StateUStudentPortal.dll

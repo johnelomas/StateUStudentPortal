@@ -72,6 +72,12 @@ namespace StateUStudentPortal.Controllers
                 Logins = await UserManager.GetLoginsAsync(userId),
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
             };
+
+            if (ViewBag.StatusMessage == "Your password has been changed.")
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
             return View(model);
         }
 

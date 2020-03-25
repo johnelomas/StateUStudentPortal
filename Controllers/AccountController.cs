@@ -75,11 +75,19 @@ namespace StateUStudentPortal.Controllers
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            var result = await SignInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
                 case SignInStatus.Success:
+                    
+                    if (model.Password == "@Student1")
+                    {
+                        // New users must change password from the system default.
+                        return RedirectToAction("ChangePassword", "Manage");
+                    }
+                        
                     return RedirectToLocal(returnUrl);
+
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -254,7 +262,10 @@ namespace StateUStudentPortal.Controllers
                 // Don't reveal that the user does not exist
                 return RedirectToAction("ResetPasswordConfirmation", "Account");
             }
-            var result = await UserManager.ResetPasswordAsync(user.Id, model.Code, model.Password);
+
+            string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
+
+            var result = await UserManager.ResetPasswordAsync(user.Id, code, model.Password);
             if (result.Succeeded)
             {
                 return RedirectToAction("ResetPasswordConfirmation", "Account");
