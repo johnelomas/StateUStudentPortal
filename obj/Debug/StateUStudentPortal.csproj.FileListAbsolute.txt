@@ -105,4 +105,3 @@ C:\Users\johne\Documents\GitHub\StateUStudentPortal\obj\Debug\StateUStudentPorta
 C:\Users\johne\Documents\GitHub\StateUStudentPortal\obj\Debug\StateUStudentPortal.csproj.CopyComplete
 C:\Users\johne\Documents\GitHub\StateUStudentPortal\obj\Debug\StateUStudentPortal.dll
 C:\Users\johne\Documents\GitHub\StateUStudentPortal\obj\Debug\StateUStudentPortal.pdb
-C:\Users\johne\Documents\GitHub\StateUStudentPortal\obj\Debug\StateUStudentPortal.csprojAssemblyReference.cache

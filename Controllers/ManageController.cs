@@ -14,13 +14,13 @@ namespace StateUStudentPortal.Controllers
     public class ManageController : Controller
     {
         private ApplicationSignInManager _signInManager;
-        private StudentnUserManager _userManager;
+        private ApplicationUserManager _userManager;
 
         public ManageController()
         {
         }
 
-        public ManageController(StudentnUserManager userManager, ApplicationSignInManager signInManager)
+        public ManageController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
         {
             UserManager = userManager;
             SignInManager = signInManager;
@@ -38,11 +38,11 @@ namespace StateUStudentPortal.Controllers
             }
         }
 
-        public StudentnUserManager UserManager
+        public ApplicationUserManager UserManager
         {
             get
             {
-                return _userManager ?? HttpContext.GetOwinContext().GetUserManager<StudentnUserManager>();
+                return _userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
             }
             private set
             {
